@@ -1,23 +1,16 @@
 # sum of 3 integer
-
-read -p "Enter 1st number: " fno
-read -p "Enter 2nd number: " sno
-read -p "Enter 3rd number: " tno
-
-counter=0
-arr[((counter++))]=$fno
-arr[((counter++))]=$sno
-arr[((counter++))]=$tno
-
-echo "Array: ${arr[@]}"
-sum=0
-for num in ${arr[@]}
+a=(1 2 3 -1 -2 -3 4)
+for (( i=0; i<7; i++ ))
 do
-	sum=$((sum+num))	
+	for (( j=i+1; j<7; j++ ))
+	do	
+		for (( k=j+1; k<7; k++ ))
+		do	
+			sum=$((${a[i]}+${a[j]}+${a[k]}))
+			if [ $sum -eq 0 ]
+			then
+				echo "Sum of ${a[i]} + ${a[j]} + ${a[k]} is zero"
+			fi
+		done
+	done
 done
-if [ $sum -eq 0 ]
-then
-	echo "Sum of $fno $sno $tno is $sum"
-else
-	echo "Sum of $fno $sno $tno is not zero"
-fi

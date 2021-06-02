@@ -14,7 +14,6 @@ do
 		echo -n "$i "
 	done
 done
-#it will not print "1" at last for numbers like 121 or 144 or 169
 if [ $num -ne 1 ]
 then
 	echo -n "$num "
