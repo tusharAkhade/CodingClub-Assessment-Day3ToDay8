@@ -58,31 +58,18 @@ do
 			;;
 		10)
 			Oct=$((Oct+1))
-			Month[Oct]=$Jan0
+			Month[Oct]=$Oct
 			;;
 		11)
 			Nov=$((Nov+1))
-			Month[Nov]=$Jan1
+			Month[Nov]=$Nov
 			;;
 		*)
 			Dec=$((Dec+1))
-			Month[Dec]=$((Jan2+1))
+			Month[Dec]=$Dec
 			;;
 	esac
 done
-
-Month[Jan]=$Jan
-Month[Feb]=$Feb
-Month[Mar]=$Mar
-Month[Apr]=$Apr
-Month[May]=$May
-Month[Jun]=$Jun
-Month[Jul]=$Jul
-Month[Aug]=$Aug
-Month[Sep]=$Sep
-Month[Oct]=$Oct
-Month[Nov]=$Nov
-Month[Dec]=$Dec
 
 echo $'\n'Month: ${!Month[@]}
 echo People: ${Month[@]}
